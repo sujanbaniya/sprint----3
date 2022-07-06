@@ -1,8 +1,9 @@
 import 'dart:io';
 
+import 'package:BikeServicing/api/http_services.dart';
+import 'package:BikeServicing/response/get_product_response.dart';
 import 'package:dio/dio.dart';
-import 'package:eshopping/api/http_services.dart';
-import 'package:eshopping/response/get_product_response.dart';
+
 import 'package:mime/mime.dart';
 import '../model/product.dart';
 import '../utils/api_url.dart';
@@ -31,8 +32,6 @@ class ProductAPI {
         "category": product.category,
         "countInStock": product.countInStock,
         "rating": product.rating,
-        "numReviews": product.numReviews,
-        "isFeatured": product.isFeatured,
       });
 
       var response = await dio.post(productUrl,

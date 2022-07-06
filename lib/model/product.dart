@@ -15,8 +15,6 @@ class Product {
   String? category;
   int? countInStock;
   int? rating;
-  int? numReviews;
-  bool? isFeatured;
 
   Product({
     this.name,
@@ -28,8 +26,6 @@ class Product {
     this.category,
     this.countInStock,
     this.rating,
-    this.numReviews,
-    this.isFeatured,
   });
 
   //1. flutter clean

@@ -1,4 +1,5 @@
-import 'package:eshopping/repositories/user_repository.dart';
+import 'package:BikeServicing/repositories/user_repository.dart';
+import 'package:BikeServicing/screen/forgetpassword.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
 
@@ -41,7 +42,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/bike.jpg"),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -102,14 +109,40 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 50,
                       child: TextButton(
+                        style: TextButton.styleFrom(
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ForgetPassword(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          'Forget password ?',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(248, 2, 2, 2)),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    SizedBox(
+                      height: 50,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/register');
                         },
                         child: const Text(
                           'Register User',
                           style: TextStyle(
-                            fontSize: 18,
-                          ),
+                              fontSize: 18,
+                              color: Color.fromARGB(248, 2, 2, 2)),
                         ),
                       ),
                     ),

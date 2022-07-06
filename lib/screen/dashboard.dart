@@ -1,7 +1,7 @@
-import 'package:eshopping/screen/bottom_screen/packagescreen.dart';
-import 'package:eshopping/screen/bottom_screen/home.dart';
-import 'package:eshopping/screen/bottom_screen/aboutus.dart';
-import 'package:eshopping/screen/bottom_screen/servicescreen.dart';
+import 'package:BikeServicing/screen/bottom_screen/aboutus.dart';
+import 'package:BikeServicing/screen/bottom_screen/buy/sell.dart';
+import 'package:BikeServicing/screen/bottom_screen/packagescreen.dart';
+import 'package:BikeServicing/screen/bottom_screen/servicescreen.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatefulWidget {

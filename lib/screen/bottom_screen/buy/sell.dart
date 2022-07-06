@@ -1,7 +1,9 @@
-import 'package:eshopping/repositories/product_repositories.dart';
-import 'package:eshopping/response/product_category.dart';
+import 'package:BikeServicing/repositories/product_repositories.dart';
+import 'package:BikeServicing/response/product_category.dart';
+import 'package:BikeServicing/screen/product-details_screen.dart';
+
 import 'package:flutter/material.dart';
-import '../../response/get_product_response.dart';
+import '../../../response/get_product_response.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dashboard'),
+        title: const Text('Bikes for'),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 82, 99, 255),
         actions: [
@@ -37,8 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.data != null) {
-                // ProductResponse productResponse = snapshot.data!;
-                List<ProductCategory> lstProductCategory = snapshot.data!.data!;
+                List lstProductCategory = snapshot.data!.data!;
 
                 return ListView.builder(
                   itemCount: snapshot.data!.data!.length,
@@ -54,8 +55,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: Text(lstProductCategory[index].name!),
                       subtitle: Text(snapshot.data!.data![index].description!),
                       trailing: IconButton(
-                        icon: const Icon(Icons.shopping_bag),
-                        onPressed: () {},
+                        icon: const Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ProductDetailScreen(),
+                            ),
+                          );
+                        },
                       ),
                     );
                   },

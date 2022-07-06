@@ -16,8 +16,6 @@ ProductCategory _$ProductCategoryFromJson(Map<String, dynamic> json) =>
       price: json['price'] as int?,
       countInStock: json['countInStock'] as int?,
       rating: json['rating'] as int?,
-      numReviews: json['numReviews'] as int?,
-      isFeatured: json['isFeatured'] as bool?,
       category: json['category'] == null
           ? null
           : Category.fromJson(json['category'] as Map<String, dynamic>),
@@ -34,7 +32,5 @@ Map<String, dynamic> _$ProductCategoryToJson(ProductCategory instance) =>
       'price': instance.price,
       'countInStock': instance.countInStock,
       'rating': instance.rating,
-      'numReviews': instance.numReviews,
-      'isFeatured': instance.isFeatured,
       'category': instance.category,
     };

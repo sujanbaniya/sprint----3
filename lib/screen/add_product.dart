@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:eshopping/model/product.dart';
+import 'package:BikeServicing/model/product.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:motion_toast/motion_toast.dart';
@@ -61,8 +61,6 @@ class _AddProductScreenState extends State<AddProductScreen> {
   var priceController = TextEditingController(text: "595000");
   var countInStockController = TextEditingController(text: "8");
   var ratingController = TextEditingController(text: "4");
-  var numReviewsController = TextEditingController(text: "20");
-  var isFeaturedController = TextEditingController(text: "false");
 
   final _formKey = GlobalKey<FormState>();
 
@@ -202,15 +200,6 @@ class _AddProductScreenState extends State<AddProductScreen> {
                     ),
                   ),
                   gap,
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    controller: numReviewsController,
-                    decoration: const InputDecoration(
-                      labelText: 'Num reviews',
-                      hintText: 'Enter num reviews',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton.icon(
@@ -225,8 +214,6 @@ class _AddProductScreenState extends State<AddProductScreen> {
                             countInStock:
                                 int.parse(countInStockController.text),
                             rating: int.parse(ratingController.text),
-                            numReviews: int.parse(numReviewsController.text),
-                            isFeatured: false,
                           );
                           _addProduct(product);
                         }

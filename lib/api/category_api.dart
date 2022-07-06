@@ -1,8 +1,9 @@
+import 'package:BikeServicing/api/http_services.dart';
+import 'package:BikeServicing/model/dropdown_category.dart';
+import 'package:BikeServicing/response/category_response.dart';
+import 'package:BikeServicing/utils/api_url.dart';
 import 'package:dio/dio.dart';
-import 'package:eshopping/api/http_services.dart';
-import 'package:eshopping/model/dropdown_category.dart';
-import 'package:eshopping/response/category_response.dart';
-import 'package:eshopping/utils/api_url.dart';
+
 import 'package:flutter/cupertino.dart';
 
 class CategoryAPI {

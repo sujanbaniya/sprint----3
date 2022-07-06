@@ -1,5 +1,6 @@
-import 'package:eshopping/model/category.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import '../model/category.dart';
 part 'product_category.g.dart';
 
 //flutter pub run build_runner build
@@ -15,8 +16,6 @@ class ProductCategory {
   int? price;
   int? countInStock;
   int? rating;
-  int? numReviews;
-  bool? isFeatured;
   Category? category;
 
   ProductCategory({
@@ -28,8 +27,6 @@ class ProductCategory {
     this.price,
     this.countInStock,
     this.rating,
-    this.numReviews,
-    this.isFeatured,
     this.category,
   });
 

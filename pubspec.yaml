@@ -1,4 +1,4 @@
-name: eshopping
+name: BikeServicing
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -36,13 +36,20 @@ dependencies:
   json_serializable: ^6.2.0
   image_picker: ^0.8.5+3
   mime: ^1.0.2
+  all_sensors2: ^1.0.1
+  font_awesome: ^5.10.1
+  font_awesome_flutter: <latest_version>
+  
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  integration_test:
+    sdk: flutter
   build_runner: ^2.1.10
   floor_generator: ^1.2.0
   flutter_lints: ^2.0.0
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,8 +67,8 @@ flutter:
     - assets/images/Aboutus.jpg
     - assets/images/service.jpg
     - assets/images/package.jpg
-    - assets/images/register.png
-    - assets/images/login.png
+    - assets/images/bike.jpg
+    # - assets/images/login.png
 
 
   #   - images/a_dot_ham.jpeg

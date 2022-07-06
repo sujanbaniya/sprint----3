@@ -1,5 +1,5 @@
-import 'package:eshopping/response/product_category.dart';
 // ignore: depend_on_referenced_packages
+import 'package:BikeServicing/response/product_category.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'get_product_response.g.dart';

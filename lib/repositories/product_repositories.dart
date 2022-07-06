@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:eshopping/api/product_api.dart';
-import 'package:eshopping/model/product.dart';
+import 'package:BikeServicing/api/product_api.dart';
+import 'package:BikeServicing/model/product.dart';
 
 import '../response/get_product_response.dart';
 

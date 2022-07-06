@@ -1,4 +1,4 @@
-import 'package:eshopping/api/category_api.dart';
+import 'package:BikeServicing/api/category_api.dart';
 
 import '../model/dropdown_category.dart';
 
@@ -7,4 +7,3 @@ class CategoryRepository {
     return CategoryAPI().loadCategory();
   }
 }
-

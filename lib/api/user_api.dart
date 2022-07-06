@@ -1,8 +1,9 @@
+import 'package:BikeServicing/api/http_services.dart';
+import 'package:BikeServicing/model/user.dart';
+import 'package:BikeServicing/response/login_response.dart';
+import 'package:BikeServicing/utils/api_url.dart';
 import 'package:dio/dio.dart';
-import 'package:eshopping/api/http_services.dart';
-import 'package:eshopping/response/login_response.dart';
-import 'package:eshopping/utils/api_url.dart';
-import 'package:eshopping/model/user.dart';
+
 import 'package:flutter/material.dart';
 
 class UserAPI {

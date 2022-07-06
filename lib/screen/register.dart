@@ -1,8 +1,9 @@
-import 'package:eshopping/model/user.dart';
-import 'package:eshopping/repositories/user_repository.dart';
-import 'package:eshopping/utils/showMessage.dart';
+import 'package:BikeServicing/repositories/user_repository.dart';
+import 'package:BikeServicing/utils/showMessage.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
+
+import '../model/user.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -13,13 +14,11 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController(text: "Test");
-  final _addressController = TextEditingController(text: "Test");
-  final _countryController = TextEditingController(text: "Test");
-  final _phoneController = TextEditingController(text: "Test");
-  final _usernameController = TextEditingController(text: "Test");
-  final _passwordController = TextEditingController(text: "Test");
-  final _confirmPasswordController = TextEditingController(text: "Test");
+  final _emailController = TextEditingController(text: "example@gmail.com");
+  final _phoneController = TextEditingController(text: "9807957528");
+  final _usernameController = TextEditingController(text: "sujan");
+  final _passwordController = TextEditingController(text: "password");
+  final _confirmPasswordController = TextEditingController(text: "password");
 
   _registerUser(User user) async {
     bool isLogin = await UserRepository().registerUser(user);
@@ -43,12 +42,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 253, 250, 221),
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Student Registration'),
-      ),
-      body: Padding(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/bike.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: const EdgeInsets.all(8),
         child: Form(
           key: _formKey,
@@ -65,34 +65,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'Please enter email';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 8),
-                TextFormField(
-                  controller: _addressController,
-                  decoration: const InputDecoration(
-                    labelText: 'Address',
-                    border: OutlineInputBorder(),
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please enter adress';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 8),
-                TextFormField(
-                  controller: _countryController,
-                  decoration: const InputDecoration(
-                    labelText: 'Country',
-                    border: OutlineInputBorder(),
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please enter country';
                     }
                     return null;
                   },
@@ -161,8 +133,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     if (_formKey.currentState!.validate()) {
                       User user = User(
                         email: _emailController.text,
-                        address: _addressController.text,
-                        country: _countryController.text,
                         phone: _phoneController.text,
                         username: _usernameController.text,
                         password: _passwordController.text,

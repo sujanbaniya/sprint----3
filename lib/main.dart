@@ -1,12 +1,15 @@
-import 'package:eshopping/screen/add_product.dart';
-import 'package:eshopping/screen/bottom_screen/packagescreen.dart';
-import 'package:eshopping/screen/bottom_screen/home.dart';
-import 'package:eshopping/screen/bottom_screen/servicescreen.dart';
-import 'package:eshopping/screen/dashboard.dart';
-import 'package:eshopping/screen/login.dart';
-import 'package:eshopping/screen/register.dart';
-import 'package:eshopping/screen/splash.dart';
+import 'package:BikeServicing/screen/product-details_screen.dart';
+import 'package:BikeServicing/screen/splash.dart';
 import 'package:flutter/material.dart';
+
+import 'screen/add_product.dart';
+import 'screen/bottom_screen/buy/sell.dart';
+import 'screen/bottom_screen/packagescreen.dart';
+import 'screen/bottom_screen/servicescreen.dart';
+import 'screen/dashboard.dart';
+import 'screen/forgetpassword.dart';
+import 'screen/login.dart';
+import 'screen/register.dart';
 
 void main() {
   runApp(
@@ -22,6 +25,12 @@ void main() {
         '/profile': (context) => const ServiceScreen(),
         '/cart': (context) => const PackageScreen(),
         '/addProduct': (context) => const AddProductScreen(),
+        '/forgetpassword': (context) => const ForgetPassword(),
+        '/productdetailscreen': (context) => const ProductDetailScreen(),
+        // '/': (context) => const SenserScreen(),
+        // '/acceleometer': (context) => const Accelerometer(),
+        // '/proximity': (context) => ProximityScreen(),
+        //  '/gyroscope': (context) => const GyroscopeScreen(),
       },
     ),
   );
