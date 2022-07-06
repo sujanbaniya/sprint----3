@@ -1,3 +1,4 @@
+import 'package:BikeServicing/screen/cartscreen.dart';
 import 'package:BikeServicing/screen/product-details_screen.dart';
 import 'package:BikeServicing/screen/splash.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,8 @@ void main() {
         '/addProduct': (context) => const AddProductScreen(),
         '/forgetpassword': (context) => const ForgetPassword(),
         '/productdetailscreen': (context) => const ProductDetailScreen(),
+        '/cartscreen': (context) => const CartScreen(),
+
         // '/': (context) => const SenserScreen(),
         // '/acceleometer': (context) => const Accelerometer(),
         // '/proximity': (context) => ProximityScreen(),
